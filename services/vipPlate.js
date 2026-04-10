@@ -1,5 +1,5 @@
 const vip_plates = require('../models/vip_plates');
-const plateValidator = require('../utils/plateValidator');
+const plateValidator = require('../utils/validator');
 
 
 const addVipPlate = async (body) => {

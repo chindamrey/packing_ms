@@ -18,14 +18,14 @@ const calculateFee = (hours, prices, dis) => {
     }
     if (dis == 0) {
 
-        return parseFloat(totalFee.toFixed(2));
+        return { totalFee: parseFloat(totalFee.toFixed(2)) }
     }
     let discount = totalFee * (dis / 100);
     let finalFee = totalFee - discount;
     return {
-        totalFee: totalFee,
-        discount: discount,
-        finalFee: finalFee
+        totalFee: parseFloat(totalFee.toFixed(2)),
+        discount: parseFloat(discount.toFixed(2)),
+        finalFee: parseFloat(finalFee.toFixed(2))
     };
 };
 module.exports = {

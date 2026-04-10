@@ -1,5 +1,5 @@
 const packing_logs = require('../models/packing_logs');
-const plateValidator = require('../utils/plateValidator');
+const plateValidator = require('../utils/validator');
 const calculate = require('../helpers/parking')
 const dateTime = require('../utils/dateTime')
 const vipPlate = require('../models/vip_plates');

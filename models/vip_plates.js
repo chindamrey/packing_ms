@@ -6,7 +6,7 @@ const addVipPlate = async (body) => {
     return result.insertId;
 }
 const getById = async (id) => {
-    let sql = 'SELECT plate_number,discount_percentage,is_active FROM vip_plates WHERE id = ?'
+    let sql = 'SELECT id,plate_number,discount_percentage,is_active FROM vip_plates WHERE id = ?'
     const [result] = await pool.query(sql, [id]);
     return result[0];
 }
